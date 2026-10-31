@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="min-height:100vh;background:var(--color-bg)">
+
+<nav class="nav" style="position:sticky;top:0;z-index:40">
+  <div style="width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:36px">
+    <a class="nav-brand" href="./Markedia.dc.html"><span class="nav-mark">M</span>Markedia</a>
+    <div style="display:flex;gap:8px;align-items:center">
+      <a href="./Markedia.dc.html">About</a>
+      <a href="./Market.dc.html">Market</a>
+      <a href="./Lab.dc.html">Ideas Lab</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;margin-left:auto">
+      <a href="./Account.dc.html" aria-current="page" style="display:flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:500"><span class="avatar">ND</span>Nadia</a>
+      <a class="btn btn-ghost btn-sm" href="./Auth.dc.html">Log out</a>
+    </div>
+  </div>
+</nav>
+
+<main style="max-width:1160px;margin:0 auto;padding:32px 32px 0">
+
+  <a href="./Account.dc.html" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--color-neutral-600);font-size:13px;font-weight:500">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6-6 6 6 6" /></svg>
+    Back to your account
+  </a>
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:32px;margin-top:24px;padding-bottom:26px;border-bottom:1px solid var(--color-divider)">
+    <div style="flex:1;min-width:0">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span class="badge badge-owned">Owned</span>
+        <span class="kicker kicker-muted num">Bought 09 Jul 2026 · $150</span>
+      </div>
+      <h1 style="margin:16px 0 0;font-size:clamp(32px,3.8vw,50px);max-width:26ch">Subscription tooling that makes independent repair shops findable</h1>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:20px;flex-wrap:wrap">
+        <span class="avatar">LM</span>
+        <a href="./Profile.dc.html" style="font-size:14px;font-weight:600;text-decoration:none">Luca Marín</a>
+        <span style="width:1px;height:14px;background:var(--color-divider)"></span>
+        <span class="tag tag-neutral">SaaS / B2B</span><span class="tag tag-neutral">Logistics</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+      <div class="score score-lg score-mid">7.2</div>
+      <span class="score-label">Overall</span>
+    </div>
+  </div>
+
+  <section style="margin-top:32px;padding:28px;border-radius:var(--radius-lg);background:var(--color-text);color:var(--color-neutral-300);display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+    <div style="display:flex;gap:16px;align-items:flex-start;max-width:64ch">
+      <svg style="color:var(--color-accent-300);flex:none;margin-top:3px" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="1.5" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
+      <div>
+        <h4 style="margin:0;color:#fff">Like the idea? Avoid future rivals.</h4>
+        <p style="margin:8px 0 0;font-size:14px;line-height:1.6">Secure this idea to take it off the market permanently. Nobody new can buy it; everyone who already owns it keeps access — including you.</p>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:20px">
+      <div style="text-align:right">
+        <span class="num" style="font-family:var(--font-heading);font-weight:600;font-size:32px;letter-spacing:-0.035em;color:#fff">$1,400</span>
+        <div class="stat-label" style="color:var(--color-neutral-500)">One-time</div>
+      </div>
+      <button class="btn btn-primary btn-lg" type="button">Secure this idea</button>
+    </div>
+  </section>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:32px;margin-top:40px;align-items:start">
+
+    <div>
+      <div class="section-head">
+        <h3 style="margin:0">Full idea details</h3>
+        <span class="kicker kicker-muted">Visible to owners only</span>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid var(--color-divider)">
+        <div style="padding:24px 0;border-bottom:1px solid var(--color-divider)">
+          <span class="kicker num">Problem</span>
+          <p style="margin:12px 0 0;font-size:16px;line-height:1.65;max-width:72ch">Independent repair shops lose work to manufacturer service networks not because they are slower or more expensive, but because a customer cannot find them at the moment the device breaks. The shops have no scheduling surface, no parts visibility, and no way to quote before the device is on the counter.</p>
+        </div>
+        <div style="padding:24px 0;border-bottom:1px solid var(--color-divider)">
+          <span class="kicker num">Solution</span>
+          <p style="margin:12px 0 0;font-size:16px;line-height:1.65;max-width:72ch">A booking layer sold to shops as a subscription, with a consumer-facing directory as the acquisition channel. The wedge is the appointment; the business is the parts supply that the booking data makes predictable enough to pre-position regionally.</p>
+        </div>
+        <div style="padding:24px 0;border-bottom:1px solid var(--color-divider)">
+          <span class="kicker num">Target audience</span>
+          <p style="margin:12px 0 0;font-size:16px;line-height:1.65;max-width:72ch">Owner-operated repair businesses with one to four technicians, and the customers who currently default to the manufacturer because searching is harder than replacing.</p>
+        </div>
+        <div style="padding:24px 0;border-bottom:1px solid var(--color-divider)">
+          <span class="kicker num">Differentiator</span>
+          <p style="margin:12px 0 0;font-size:16px;line-height:1.65;max-width:72ch">Existing directories monetise the consumer; this monetises the shop and gives the consumer a real-time slot. That inversion is what makes the parts data trustworthy.</p>
+        </div>
+        <div style="padding:24px 0">
+          <span class="kicker num">Skills a builder needs</span>
+          <p style="margin:12px 0 0;font-size:16px;line-height:1.65;max-width:72ch">Field sales into small businesses, scheduling and inventory modelling, and enough local-SEO literacy to make the directory rank in the first six months.</p>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:48px">
+        <h3 style="margin:0">Your feedback</h3>
+        <span class="kicker kicker-muted">Only the author sees this</span>
+      </div>
+      <div class="panel" style="padding:24px">
+        <div class="field">
+          <span class="field-label">Was the idea worth what you paid?</span>
+          <div style="display:flex;gap:18px;margin-top:4px;flex-wrap:wrap">
+            <label class="radio"><input type="radio" name="worth" checked="checked" /><span class="dot"></span>Yes, clearly</label>
+            <label class="radio"><input type="radio" name="worth" /><span class="dot"></span>About right</label>
+            <label class="radio"><input type="radio" name="worth" /><span class="dot"></span>Not really</label>
+          </div>
+        </div>
+        <div class="field" style="margin-top:20px">
+          <label for="pf-note">What would you tell the author?</label>
+          <textarea class="input" id="pf-note" rows="4" placeholder="The parts-supply argument is the strongest part — I'd want more detail on regional density before committing."></textarea>
+        </div>
+        <div style="display:flex;justify-content:flex-end;margin-top:18px">
+          <button class="btn btn-primary" type="button">Send feedback</button>
+        </div>
+      </div>
+    </div>
+
+    <aside style="display:flex;flex-direction:column;gap:10px">
+      <div class="section-head" style="margin-bottom:8px">
+        <h4 style="margin:0">AI evaluation</h4>
+        <span class="kicker kicker-muted">Full reasoning</span>
+      </div>
+
+      <div class="panel" style="padding:16px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Originality</span><span class="tag tag-neutral num">30%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-mid)">7.0</span>
+        </div>
+        <div class="meter" style="margin-top:10px"><div class="meter-fill meter-fill-mid" style="width:70%"></div></div>
+        <p style="margin:12px 0 0;font-size:13px;line-height:1.55;color:var(--color-neutral-700)">Directories are a crowded category; the inversion of who pays is the original move rather than the product itself.</p>
+      </div>
+
+      <div class="panel" style="padding:16px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Feasibility</span><span class="tag tag-neutral num">25%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-high)">8.5</span>
+        </div>
+        <div class="meter" style="margin-top:10px"><div class="meter-fill" style="width:85%"></div></div>
+        <p style="margin:12px 0 0;font-size:13px;line-height:1.55;color:var(--color-neutral-700)">Nothing technically hard. The constraint is sales cycle length, which the author acknowledges.</p>
+      </div>
+
+      <div class="panel" style="padding:16px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Scalability</span><span class="tag tag-neutral num">10%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-mid)">6.5</span>
+        </div>
+        <div class="meter" style="margin-top:10px"><div class="meter-fill meter-fill-mid" style="width:65%"></div></div>
+        <p style="margin:12px 0 0;font-size:13px;line-height:1.55;color:var(--color-neutral-700)">Growth is city-by-city and depends on local density — real, but not fast.</p>
+      </div>
+
+      <div class="panel" style="padding:16px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Defensibility</span><span class="tag tag-neutral num">15%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-low)">5.5</span>
+        </div>
+        <div class="meter" style="margin-top:10px"><div class="meter-fill meter-fill-low" style="width:55%"></div></div>
+        <p style="margin:12px 0 0;font-size:13px;line-height:1.55;color:var(--color-neutral-700)">The booking layer is copyable. Only the parts relationships would be hard to reproduce.</p>
+      </div>
+
+      <div class="panel" style="padding:16px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Problem-Solution Fit</span><span class="tag tag-neutral num">10%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-high)">8.0</span>
+        </div>
+        <div class="meter" style="margin-top:10px"><div class="meter-fill" style="width:80%"></div></div>
+      </div>
+
+      <div class="panel" style="padding:16px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Clarity</span><span class="tag tag-neutral num">10%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-high)">8.0</span>
+        </div>
+        <div class="meter" style="margin-top:10px"><div class="meter-fill" style="width:80%"></div></div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer style="border-top:1px solid var(--color-divider);margin-top:72px">
+  <div style="max-width:1160px;margin:0 auto;padding:22px 32px;display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <span class="kicker kicker-muted">Markedia — the market of ideas</span>
+    <div style="display:flex;gap:22px">
+      <a class="kicker kicker-muted" href="./Market.dc.html" style="text-decoration:none">Market</a>
+      <a class="kicker kicker-muted" href="./Account.dc.html" style="text-decoration:none">Account</a>
+      <a class="kicker kicker-muted" href="./Markedia.dc.html" style="text-decoration:none">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>

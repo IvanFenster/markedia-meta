@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="min-height:100vh;background:var(--color-bg)">
+
+<nav class="nav" style="position:sticky;top:0;z-index:40">
+  <div style="width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:36px">
+    <a class="nav-brand" href="./Markedia.dc.html"><span class="nav-mark">M</span>Markedia</a>
+    <div style="display:flex;gap:8px;align-items:center">
+      <a href="./Markedia.dc.html">About</a>
+      <a href="./Market.dc.html" aria-current="page">Market</a>
+      <a href="./Lab.dc.html">Ideas Lab</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;margin-left:auto">
+      <a href="./Account.dc.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:600"><span class="avatar" style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center">ND</span>Nadia</a>
+      <a class="btn btn-ghost btn-sm" href="./Auth.dc.html">Log out</a>
+    </div>
+  </div>
+</nav>
+
+<main style="max-width:1160px;margin:0 auto;padding:32px 32px 0">
+
+  <a href="./Market.dc.html" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--color-neutral-600);font-size:13px;font-weight:500">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6-6 6 6 6" /></svg>
+    Back to Market
+  </a>
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:32px;margin-top:26px;padding-bottom:26px;border-bottom:1px solid var(--color-divider)">
+    <div style="flex:1;min-width:0">
+      <span class="kicker">Startup idea · listed 14 Jul 2026</span>
+      <h1 style="margin:14px 0 0;font-size:clamp(32px,3.8vw,50px);max-width:24ch">A compliance layer that lets small clinics run remote trials</h1>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:20px;flex-wrap:wrap">
+        <span class="avatar">ND</span>
+        <a href="./Profile.dc.html" style="font-size:14px;font-weight:600;text-decoration:none">Nadia Duarte</a>
+        <span style="width:1px;height:14px;background:var(--color-divider)"></span>
+        <span class="tag tag-neutral">HealthTech</span><span class="tag tag-neutral">AI / ML</span><span class="tag tag-neutral">SaaS / B2B</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+      <div class="score score-lg score-high">8.6</div>
+      <span class="score-label">Overall</span>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:32px;margin-top:32px;align-items:start">
+
+    <div style="display:flex;flex-direction:column;gap:20px">
+
+      <section class="panel panel-accent" style="padding:24px">
+        <span class="kicker">AI preview</span>
+        <p style="margin:12px 0 0;font-size:16px;line-height:1.6;color:var(--color-neutral-900)">A regulatory-workflow product for under-resourced clinical sites. The submission burden is reframed as a template problem, which makes the addressable market far wider than trial software usually reaches. The author has identified a specific bottleneck between site staff and sponsor requirements, and proposes a mechanism that removes the need for a dedicated coordinator on smaller studies.</p>
+        <p style="margin:16px 0 0;font-size:13px;line-height:1.55;color:var(--color-accent-800);font-style:italic">The preview summarises the idea without revealing its full content. Buy the idea to see the detailed problem, solution, and the author's reasoning.</p>
+      </section>
+
+      <section class="panel" style="padding:0">
+        <div style="padding:24px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;border-bottom:1px solid var(--color-divider)">
+          <div>
+            <span class="kicker kicker-muted">Price</span>
+            <div style="display:flex;align-items:baseline;gap:12px;margin-top:8px">
+              <span class="num" style="font-family:var(--font-heading);font-weight:600;font-size:44px;letter-spacing:-0.04em;line-height:1">$340</span>
+              <span class="num" style="font-size:13px;color:var(--color-neutral-500);text-decoration:line-through">AI suggested $390</span>
+            </div>
+          </div>
+          <span class="badge badge-unpublished num" style="margin-top:22px">12 buyers</span>
+        </div>
+
+        <div style="padding:20px 24px;display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--color-divider);background:var(--color-neutral-100)">
+          <svg style="color:var(--color-text);flex:none;margin-top:2px" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="1.5" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
+          <div>
+            <p style="margin:0;font-size:13px;font-weight:600">Can be secured for <span class="num">$1,400</span></p>
+            <p style="margin:4px 0 0;font-size:13px;line-height:1.55;color:var(--color-neutral-700)">Buy at the regular price first — then you can secure it to take it off the market. Everyone who already bought it keeps access.</p>
+          </div>
+        </div>
+
+        <div style="padding:24px">
+          <div style="display:flex;gap:10px">
+            <button class="btn btn-primary btn-lg" type="button" style="flex:1">Buy idea</button>
+            <button class="btn btn-secondary btn-lg" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v17l-6-4-6 4z" /></svg>
+              Save for later
+            </button>
+          </div>
+          <p style="margin:14px 0 0;font-size:12px;line-height:1.55;color:var(--color-neutral-600)">Saving keeps the idea on your account so you can come back and decide whether to buy it.</p>
+        </div>
+      </section>
+
+      <section class="panel" style="padding:24px">
+        <span class="kicker">What you unlock on purchase</span>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;margin-top:16px">
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--color-accent);font-weight:700;line-height:1.4">✳</span><p style="margin:0;font-size:14px;line-height:1.5">The full problem statement and proposed solution</p></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--color-accent);font-weight:700;line-height:1.4">✳</span><p style="margin:0;font-size:14px;line-height:1.5">Target audience, differentiator, and the skills needed</p></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--color-accent);font-weight:700;line-height:1.4">✳</span><p style="margin:0;font-size:14px;line-height:1.5">The complete AI evaluation with reasoning per score</p></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--color-accent);font-weight:700;line-height:1.4">✳</span><p style="margin:0;font-size:14px;line-height:1.5">Permanent access from your account page</p></div>
+        </div>
+      </section>
+
+    </div>
+
+    <aside>
+      <div class="section-head" style="margin-bottom:18px">
+        <h4 style="margin:0">AI score breakdown</h4>
+        <span class="kicker kicker-muted">6 criteria</span>
+      </div>
+      <p style="margin:0 0 14px;font-size:13px;line-height:1.55;color:var(--color-neutral-700)">Each score is weighted to produce the overall rating. Open a row to read what a score in that range means.</p>
+
+      <div style="display:flex;flex-direction:column;gap:8px">
+
+        <div class="panel" style="padding:14px 16px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:14px;font-weight:600">Originality</span>
+              <span class="tag tag-neutral num">30%</span>
+            </div>
+            <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:16px;color:var(--color-score-high)">9.0</span>
+          </div>
+          <div class="meter" style="margin-top:10px"><div class="meter-fill" style="width:90%"></div></div>
+          <p style="margin:12px 0 0;font-size:13px;line-height:1.55;color:var(--color-neutral-700)">A genuinely fresh framing. The mechanism is not obvious from the problem statement, and no widely known product occupies this position.</p>
+        </div>
+
+        <div class="panel" style="padding:14px 16px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:14px;font-weight:600">Feasibility</span>
+              <span class="tag tag-neutral num">25%</span>
+            </div>
+            <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:16px;color:var(--color-score-high)">8.5</span>
+          </div>
+          <div class="meter" style="margin-top:10px"><div class="meter-fill" style="width:85%"></div></div>
+        </div>
+
+        <div class="panel" style="padding:14px 16px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:14px;font-weight:600">Defensibility</span>
+              <span class="tag tag-neutral num">15%</span>
+            </div>
+            <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:16px;color:var(--color-score-mid)">7.5</span>
+          </div>
+          <div class="meter" style="margin-top:10px"><div class="meter-fill meter-fill-mid" style="width:75%"></div></div>
+        </div>
+
+        <div class="panel" style="padding:14px 16px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:14px;font-weight:600">Scalability</span>
+              <span class="tag tag-neutral num">10%</span>
+            </div>
+            <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:16px;color:var(--color-score-high)">8.0</span>
+          </div>
+          <div class="meter" style="margin-top:10px"><div class="meter-fill" style="width:80%"></div></div>
+        </div>
+
+        <div class="panel" style="padding:14px 16px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:14px;font-weight:600">Problem-Solution Fit</span>
+              <span class="tag tag-neutral num">10%</span>
+            </div>
+            <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:16px;color:var(--color-score-high)">9.0</span>
+          </div>
+          <div class="meter" style="margin-top:10px"><div class="meter-fill" style="width:90%"></div></div>
+        </div>
+
+        <div class="panel" style="padding:14px 16px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:14px;font-weight:600">Clarity</span>
+              <span class="tag tag-neutral num">10%</span>
+            </div>
+            <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:16px;color:var(--color-score-mid)">7.0</span>
+          </div>
+          <div class="meter" style="margin-top:10px"><div class="meter-fill meter-fill-mid" style="width:70%"></div></div>
+        </div>
+
+      </div>
+
+      <div class="panel" style="margin-top:14px;padding:18px;border-style:dashed;text-align:center">
+        <svg style="color:var(--color-neutral-500);margin:0 auto" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="1.5" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
+        <p style="margin:10px 0 0;font-size:13px;color:var(--color-neutral-700)">Logged-out visitors see the overall score only. Sign in to read the breakdown.</p>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer style="border-top:1px solid var(--color-divider);margin-top:72px">
+  <div style="max-width:1160px;margin:0 auto;padding:22px 32px;display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <span class="kicker kicker-muted">Markedia — the market of ideas</span>
+    <div style="display:flex;gap:22px">
+      <a class="kicker kicker-muted" href="./Market.dc.html" style="text-decoration:none">Market</a>
+      <a class="kicker kicker-muted" href="./Lab.dc.html" style="text-decoration:none">Ideas Lab</a>
+      <a class="kicker kicker-muted" href="./Markedia.dc.html" style="text-decoration:none">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>

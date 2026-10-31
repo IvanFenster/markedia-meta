@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="min-height:100vh;background:var(--color-bg);padding-bottom:96px">
+
+<nav class="nav" style="position:sticky;top:0;z-index:40">
+  <div style="width:100%;max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:32px">
+    <a class="nav-brand" href="./Markedia.dc.html"><span class="nav-mark">M</span>Markedia</a>
+    <div style="display:flex;gap:8px;align-items:center">
+      <a href="./Markedia.dc.html">About</a>
+      <a href="./Market.dc.html">Market</a>
+      <a href="./Lab.dc.html" aria-current="page">Ideas Lab</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;margin-left:auto">
+      <a href="./Account.dc.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:600"><span class="avatar" style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center">ND</span>Nadia</a>
+      <a class="btn btn-ghost btn-sm" href="./Auth.dc.html">Log out</a>
+    </div>
+  </div>
+</nav>
+
+<main style="max-width:1240px;margin:0 auto;padding:32px 32px 0">
+
+  <a href="./Lab.dc.html" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--color-neutral-600);font-size:13px;font-weight:500">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6-6 6 6 6" /></svg>
+    Back to Ideas Lab
+  </a>
+
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-top:24px;padding-bottom:24px;border-bottom:1px solid var(--color-divider);flex-wrap:wrap">
+    <div>
+      <span class="kicker">Document</span>
+      <h1 style="margin:12px 0 0;font-size:clamp(34px,4vw,52px)">Create new idea</h1>
+      <p style="margin:12px 0 0;font-size:16px;color:var(--color-neutral-700)">Fill in the details, then evaluate, save, or keep it as a draft.</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <span class="badge badge-draft">Unsaved draft</span>
+      <span class="kicker kicker-muted">Autosaved 2 min ago</span>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:40px;margin-top:32px;align-items:start">
+
+    <form style="display:flex;flex-direction:column;gap:26px">
+
+      <div class="field">
+        <span class="field-label">Idea type</span>
+        <div class="seg">
+          <label class="seg-opt"><input type="radio" name="idea-type" checked="checked" />Startup</label>
+          <label class="seg-opt"><input type="radio" name="idea-type" />Research</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ed-heading">Heading <span class="field-req">*</span></label>
+        <input class="input" id="ed-heading" type="text" value="A compliance layer that lets small clinics run their own remote trials" />
+        <p class="field-hint">Your own working title. The public listing gets an AI-written heading that doesn't give the idea away.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Categories</span>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <button class="chip chip-accent" type="button">AI / ML</button>
+          <button class="chip" type="button">FinTech</button>
+          <button class="chip chip-accent" type="button">HealthTech</button>
+          <button class="chip" type="button">Education</button>
+          <button class="chip chip-accent" type="button">SaaS / B2B</button>
+          <button class="chip" type="button">Marketplace</button>
+          <button class="chip" type="button">E-commerce</button>
+          <button class="chip" type="button">Sustainability</button>
+          <button class="chip" type="button">Cybersecurity</button>
+          <button class="chip" type="button">Social</button>
+          <button class="chip" type="button">Entertainment</button>
+          <button class="chip" type="button">Logistics</button>
+          <button class="chip" type="button">Agriculture</button>
+          <button class="chip" type="button">Hardware</button>
+          <button class="chip" type="button">HR / Productivity</button>
+          <button class="chip chip-dashed" type="button">Show 19 more</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ed-problem">What problem does your idea solve? <span class="field-req">*</span></label>
+        <textarea class="input" id="ed-problem" rows="4">Small clinical sites want to run decentralised trials but cannot afford a dedicated regulatory coordinator, so sponsors exclude them and the trials that reach them are the ones with the least oversight.</textarea>
+      </div>
+
+      <div class="field">
+        <label for="ed-solution">How exactly does your idea solve the problem? <span class="field-req">*</span></label>
+        <textarea class="input" id="ed-solution" rows="4" placeholder="Explain your approach, mechanism, or product concept…"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="ed-audience">Who is the target audience or who would benefit from this?</label>
+        <textarea class="input" id="ed-audience" rows="3" placeholder="e.g. small business owners, college students, healthcare providers…"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="ed-diff">What makes this idea different from existing solutions?</label>
+        <textarea class="input" id="ed-diff" rows="3" placeholder="Describe your unique angle or competitive advantage…"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="ed-skills">What skills or expertise would a buyer need to execute this?</label>
+        <textarea class="input input-error" id="ed-skills" rows="3" placeholder="e.g. full-stack development, marketing experience, domain knowledge…"></textarea>
+        <p class="field-hint" style="color:var(--color-danger)">Required fields highlighted in this color must be filled before evaluating.</p>
+      </div>
+
+    </form>
+
+    <aside style="position:sticky;top:88px;display:flex;flex-direction:column;gap:12px">
+      <div class="section-head" style="margin-bottom:6px">
+        <h4 style="margin:0">AI evaluation</h4>
+        <span class="kicker kicker-muted">Evaluate</span>
+      </div>
+
+      <div class="panel" style="padding:18px;display:flex;align-items:center;gap:16px">
+        <div class="score score-high">8.6</div>
+        <div>
+          <span class="kicker kicker-muted">Overall AI score</span>
+          <p style="margin:4px 0 0;font-size:14px;color:var(--color-neutral-700)">Weighted across 6 criteria</p>
+        </div>
+      </div>
+
+      <div class="panel" style="padding:0;overflow:hidden">
+        <div style="padding:12px 16px;border-bottom:1px solid var(--color-divider);display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Originality</span><span class="tag tag-neutral num">30%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-high)">9.0</span>
+        </div>
+        <div style="padding:12px 16px;border-bottom:1px solid var(--color-divider);display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Feasibility</span><span class="tag tag-neutral num">25%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-high)">8.5</span>
+        </div>
+        <div style="padding:12px 16px;border-bottom:1px solid var(--color-divider);display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Scalability</span><span class="tag tag-neutral num">10%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-high)">8.0</span>
+        </div>
+        <div style="padding:12px 16px;border-bottom:1px solid var(--color-divider);display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Defensibility</span><span class="tag tag-neutral num">15%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-mid)">7.5</span>
+        </div>
+        <div style="padding:12px 16px;border-bottom:1px solid var(--color-divider);display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Problem-Solution Fit</span><span class="tag tag-neutral num">10%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-high)">9.0</span>
+        </div>
+        <div style="padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px;font-weight:600">Clarity</span><span class="tag tag-neutral num">10%</span></div>
+          <span class="num" style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--color-score-mid)">7.0</span>
+        </div>
+      </div>
+
+      <div class="panel panel-accent" style="padding:18px">
+        <span class="kicker">AI preview — what buyers see</span>
+        <p style="margin:10px 0 0;font-size:14px;font-weight:600;line-height:1.35">A compliance layer that lets small clinics run remote trials</p>
+        <p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:var(--color-neutral-800)">A regulatory-workflow product for under-resourced clinical sites. The submission burden is reframed as a template problem, which makes the addressable market far wider than trial software usually reaches.</p>
+        <p style="margin:12px 0 0;font-size:12px;line-height:1.5;color:var(--color-accent-800);font-style:italic">The public heading and this preview are what buyers see on the Market — the full idea stays hidden until purchase.</p>
+      </div>
+
+      <div class="panel" style="padding:16px;border-color:var(--color-accent-2-300);background:var(--color-accent-2-100)">
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <svg style="color:var(--color-accent-2-700);flex:none;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z" /><path d="M12 9v5" /><path d="M12 17h.01" /></svg>
+          <p style="margin:0;font-size:13px;line-height:1.55;color:var(--color-accent-2-900)">This evaluation is out of date — the idea has been edited since. Re-evaluate to refresh the score and preview.</p>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<div style="position:sticky;bottom:0;margin-top:48px;border-top:1px solid var(--color-divider);background:color-mix(in srgb, var(--color-bg) 94%, transparent)">
+  <div style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <span class="kicker kicker-muted">Price &amp; publish — the AI suggests, you decide</span>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-danger btn-sm" type="button">Delete</button>
+      <button class="btn btn-secondary" type="button">Save as draft</button>
+      <button class="btn btn-secondary" type="button">Save</button>
+      <button class="btn btn-dark" type="button">Save &amp; re-evaluate</button>
+      <button class="btn btn-primary" type="button">Publish to Market</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

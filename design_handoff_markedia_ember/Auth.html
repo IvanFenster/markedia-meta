@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="min-height:100vh;background:var(--color-bg);display:grid;grid-template-columns:minmax(0,1fr) 520px">
+
+  <section style="background:var(--color-text);color:var(--color-neutral-300);padding:40px 56px;display:flex;flex-direction:column;justify-content:space-between;min-height:100vh">
+    <a class="nav-brand" href="./Markedia.dc.html" style="margin:0;color:#fff8f2"><span class="nav-mark">M</span>Markedia</a>
+    <div>
+      <span class="kicker" style="color:var(--color-accent-300)">The market of ideas</span>
+      <h1 style="margin:20px 0 0;font-size:clamp(38px,4.6vw,64px);color:#fff;max-width:22ch">Ideas are worth something. Get yours evaluated.</h1>
+      <p style="margin:24px 0 0;max-width:52ch;font-size:16px;line-height:1.65">An account gets you the whole pipeline: document an idea in the Lab, have the AI score it across six weighted criteria, set your price, and publish it to buyers who are already looking.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,auto);gap:32px;justify-content:start;margin-top:44px;padding-top:28px;border-top:1px solid var(--color-neutral-800)">
+        <div><div class="stat-num num" style="color:#fff">248</div><div class="stat-label" style="color:var(--color-neutral-500)">Ideas live</div></div>
+        <div><div class="stat-num num" style="color:#fff">6</div><div class="stat-label" style="color:var(--color-neutral-500)">Score criteria</div></div>
+        <div><div class="stat-num num" style="color:#fff">1.9k</div><div class="stat-label" style="color:var(--color-neutral-500)">Builders</div></div>
+      </div>
+    </div>
+    <span class="kicker" style="color:var(--color-neutral-600)">markedia.me</span>
+  </section>
+
+  <section style="padding:40px 48px;display:flex;flex-direction:column;justify-content:center">
+    <div style="width:100%;max-width:380px;margin:0 auto">
+      <span class="kicker">Welcome to Markedia</span>
+      <h2 style="margin:12px 0 0;font-size:34px">Create your account</h2>
+      <p style="margin:10px 0 0;font-size:15px;color:var(--color-neutral-700)">Sign up or log in to manage your ideas.</p>
+
+      <div class="seg" style="display:flex;width:100%;margin-top:28px">
+        <label class="seg-opt" style="flex:1;justify-content:center"><input type="radio" name="auth-mode" />Log in</label>
+        <label class="seg-opt" style="flex:1;justify-content:center"><input type="radio" name="auth-mode" checked="checked" />Sign up</label>
+      </div>
+
+      <form style="display:flex;flex-direction:column;gap:18px;margin-top:26px">
+        <div class="field">
+          <label for="au-name">Display name</label>
+          <input class="input" id="au-name" type="text" placeholder="How others will see you" />
+        </div>
+        <div class="field">
+          <label for="au-email">Email</label>
+          <input class="input" id="au-email" type="email" placeholder="you@example.com" />
+        </div>
+        <div class="field">
+          <label for="au-pass">Password</label>
+          <input class="input" id="au-pass" type="password" placeholder="At least 6 characters" />
+        </div>
+
+        <div style="display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:1px solid var(--color-danger);background:var(--color-danger-100);border-radius:var(--radius-md)">
+          <svg style="color:var(--color-danger);flex:none;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 8v4" /><path d="M12 16h.01" /></svg>
+          <p style="margin:0;font-size:13px;line-height:1.5;color:var(--color-danger-700)">Password must be at least 6 characters.</p>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="button">Create account</button>
+      </form>
+
+      <p style="margin:22px 0 0;font-size:13px;line-height:1.6;color:var(--color-neutral-600)">By creating an account you agree to the <a href="./Markedia.dc.html">Terms</a> and the <a href="./Markedia.dc.html">Privacy Policy</a>. Browsing the <a href="./Market.dc.html">Market</a> needs no account — scores and purchases do.</p>
+    </div>
+  </section>
+
+</div>
+
+</x-dc>
+</body>
+</html>

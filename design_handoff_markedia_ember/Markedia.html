@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div ref="{{ rootRef }}" style="min-height:100vh">
+
+<nav class="nav" style="position:sticky;top:0;z-index:40">
+  <div style="width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:36px">
+    <a class="nav-brand" href="./Markedia.dc.html"><span class="nav-mark">M</span>Markedia</a>
+    <div style="display:flex;gap:8px;align-items:center">
+      <a href="./Markedia.dc.html" aria-current="page" style="padding:8px 14px;border-radius:999px;background:rgba(36,26,19,0.055)">About</a>
+      <a href="./Market.dc.html" style="padding:8px 14px;border-radius:999px" style-hover="background:rgba(36,26,19,0.045)">Market</a>
+      <a href="./Lab.dc.html" style="padding:8px 14px;border-radius:999px" style-hover="background:rgba(36,26,19,0.045)">Ideas Lab</a>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center;margin-left:auto">
+      <a class="btn btn-ghost btn-sm" href="./Auth.dc.html">Log in</a>
+      <a class="btn btn-primary btn-sm" href="./Auth.dc.html">Sign up</a>
+    </div>
+  </div>
+</nav>
+
+<header style="max-width:1200px;margin:0 auto;padding:72px 32px 40px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);gap:56px;align-items:center">
+  <div>
+    <span style="display:inline-flex;align-items:center;gap:9px;padding:7px 15px 7px 11px;border-radius:999px;background:#fff;box-shadow:var(--shadow-sm);font-size:13px;font-weight:700;color:var(--color-neutral-700)">
+      <span style="width:8px;height:8px;border-radius:999px;background:var(--color-accent);box-shadow:0 0 0 4px var(--color-accent-100)"></span>
+      The market of ideas
+    </span>
+    <h1 style="margin:26px 0 0;font-size:clamp(46px,5.6vw,82px)">Get an idea<br />for your <span style="color:var(--color-accent)">Startup.</span></h1>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">
+      <span style="padding:7px 14px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--color-neutral-300);font-size:13.5px;font-weight:600;color:var(--color-neutral-700)">Research</span>
+      <span style="padding:7px 14px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--color-neutral-300);font-size:13.5px;font-weight:600;color:var(--color-neutral-700)">Content</span>
+      <span style="padding:7px 14px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--color-neutral-300);font-size:13.5px;font-weight:600;color:var(--color-neutral-700)">Project</span>
+      <span style="padding:7px 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--color-neutral-500)">…anything you're about to build</span>
+    </div>
+    <p style="max-width:52ch;margin:26px 0 0;font-size:17.5px;line-height:1.6;color:var(--color-neutral-700)">Markedia connects <strong style="color:var(--color-text);font-weight:700">Visioners</strong> who have groundbreaking ideas with <strong style="color:var(--color-text);font-weight:700">Builders</strong> who can make them real. AI evaluates, scores, and previews every idea — so you know exactly what you're getting.</p>
+    <div style="display:flex;gap:12px;align-items:center;margin-top:30px;flex-wrap:wrap">
+      <a class="btn btn-primary btn-lg" href="./Market.dc.html">Browse ideas</a>
+      <a class="btn btn-secondary btn-lg" href="./Lab.dc.html">Open Ideas Lab
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
+      </a>
+    </div>
+    <p style="margin:16px 0 0;font-size:13.5px;color:var(--color-neutral-600)">Selling an idea? Everything starts in the Lab.</p>
+  </div>
+
+  <div style="position:relative;padding:30px 0 46px">
+    <div style="position:absolute;inset:0 -12px 18px 26px;background:var(--color-accent-100);border-radius:52% 48% 44% 56% / 48% 52% 48% 52%;transform:rotate(-4deg)"></div>
+    <div style="position:absolute;right:14px;top:0;width:190px;height:190px;background:rgba(234,161,28,0.16);border-radius:999px;filter:blur(2px)"></div>
+    <article style="position:relative;max-width:430px;margin:0 0 0 auto;padding:26px;border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-lg);transform:rotate(-1.4deg)">
+      <div style="display:flex;gap:16px;align-items:flex-start">
+        <div style="flex:1;min-width:0">
+          <span class="kicker">Startup idea</span>
+          <h3 style="margin:9px 0 0;font-size:23px">A compliance layer that lets small clinics run remote trials</h3>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+          <div class="score score-high">8.6</div>
+          <span class="score-label">Score</span>
+        </div>
+      </div>
+      <div style="margin-top:18px;padding:16px 18px;border-radius:22px;background:var(--color-accent-100)">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--color-accent-700)">AI preview</span>
+        <p style="margin:7px 0 0;font-size:14px;line-height:1.55;color:var(--color-accent-900)">A regulatory-workflow product for under-resourced clinical sites — the submission burden reframed as a template problem.</p>
+      </div>
+      <div style="margin-top:18px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div style="display:flex;align-items:center;gap:9px">
+          <span class="avatar" style="width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center">ND</span>
+          <span style="font-size:13.5px;font-weight:600;color:var(--color-neutral-700)">Nadia Duarte</span>
+        </div>
+        <span style="font-family:var(--font-heading);font-weight:700;font-size:24px;letter-spacing:-0.035em;font-variant-numeric:tabular-nums">$340</span>
+      </div>
+    </article>
+    <div style="position:relative;z-index:2;margin:16px auto 0 0;display:inline-flex;align-items:center;gap:11px;padding:10px 18px 10px 12px;border-radius:999px;background:#fff;box-shadow:var(--shadow-md);transform:rotate(2deg)">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:999px;background:var(--color-accent);color:#fff">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3" /><path d="M12 18v3" /><path d="M4.9 4.9l2.1 2.1" /><path d="M17 17l2.1 2.1" /><path d="M3 12h3" /><path d="M18 12h3" /><path d="M4.9 19.1L7 17" /><path d="M17 7l2.1-2.1" /></svg>
+      </span>
+      <span style="font-size:13.5px;font-weight:700">Scored on 6 criteria before it goes live</span>
+    </div>
+  </div>
+</header>
+
+<section style="max-width:1200px;margin:0 auto;padding:52px 32px 20px">
+  <div class="section-head">
+    <div>
+      <span class="kicker">On the market</span>
+      <h2 style="margin:10px 0 0;font-size:clamp(30px,3.4vw,42px)">Top ideas, ready to build</h2>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn btn-secondary btn-icon" type="button" aria-label="Previous"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6-6 6 6 6" /></svg></button>
+      <button class="btn btn-secondary btn-icon" type="button" aria-label="Next"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 6 6 6-6 6" /></svg></button>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+
+    <article class="card" style="padding:24px;display:flex;flex-direction:column;gap:0" style-hover="transform:translateY(-3px)">
+      <div style="display:flex;gap:14px;align-items:flex-start">
+        <h4 style="flex:1;min-width:0;margin:0;font-size:20px">A compliance layer that lets small clinics run remote trials</h4>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+          <div class="score score-high">8.6</div>
+          <span class="score-label">Score</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:9px;margin-top:16px">
+        <span class="avatar" style="width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center">ND</span>
+        <a href="./Profile.dc.html" style="font-size:13.5px;font-weight:600;text-decoration:none;color:var(--color-neutral-700)">Nadia Duarte</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px">
+        <span class="tag tag-neutral">HealthTech</span><span class="tag tag-neutral">AI / ML</span>
+      </div>
+      <div style="margin-top:16px;padding:16px 18px;border-radius:22px;background:var(--color-accent-100)">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--color-accent-700)">AI preview</span>
+        <p style="margin:7px 0 0;font-size:14px;line-height:1.55;color:var(--color-accent-900)">A regulatory-workflow product for under-resourced clinical sites. The submission burden is reframed as a template problem, which makes the addressable market far wider than trial software usually reaches.</p>
+      </div>
+      <div style="margin-top:auto;padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div style="display:flex;align-items:baseline;gap:9px">
+          <span style="font-family:var(--font-heading);font-weight:700;font-size:26px;letter-spacing:-0.035em;font-variant-numeric:tabular-nums">$340</span>
+          <span style="font-size:12.5px;font-weight:600;color:var(--color-neutral-600);font-variant-numeric:tabular-nums;white-space:nowrap">12 bought</span>
+        </div>
+        <a class="btn btn-primary btn-sm" href="./Idea.dc.html">Learn more</a>
+      </div>
+    </article>
+
+    <article class="card" style="padding:24px;display:flex;flex-direction:column;gap:0" style-hover="transform:translateY(-3px)">
+      <div style="display:flex;gap:14px;align-items:flex-start">
+        <h4 style="flex:1;min-width:0;margin:0;font-size:20px">A marketplace where farm co-ops sell verified soil carbon</h4>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+          <div class="score score-high">8.1</div>
+          <span class="score-label">Score</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:9px;margin-top:16px">
+        <span class="avatar" style="width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center">TK</span>
+        <a href="./Profile.dc.html" style="font-size:13.5px;font-weight:600;text-decoration:none;color:var(--color-neutral-700)">Tomas Kell</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px">
+        <span class="tag tag-neutral">Sustainability</span><span class="tag tag-neutral">Marketplace</span><span class="tag tag-neutral">Agriculture</span>
+      </div>
+      <div style="margin-top:16px;padding:16px 18px;border-radius:22px;background:var(--color-accent-100)">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--color-accent-700)">AI preview</span>
+        <p style="margin:7px 0 0;font-size:14px;line-height:1.55;color:var(--color-accent-900)">Aggregation plus a measurement protocol, aimed at the group that currently cannot afford verification. Defensibility rests on the co-op relationships rather than the technology.</p>
+      </div>
+      <div style="margin-top:auto;padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div style="display:flex;align-items:baseline;gap:9px">
+          <span style="font-family:var(--font-heading);font-weight:700;font-size:26px;letter-spacing:-0.035em;font-variant-numeric:tabular-nums">$280</span>
+          <span style="font-size:12.5px;font-weight:600;color:var(--color-neutral-600);font-variant-numeric:tabular-nums;white-space:nowrap">7 bought</span>
+        </div>
+        <a class="btn btn-primary btn-sm" href="./Idea.dc.html">Learn more</a>
+      </div>
+    </article>
+
+    <article class="card" style="padding:24px;display:flex;flex-direction:column;gap:0" style-hover="transform:translateY(-3px)">
+      <div style="display:flex;gap:14px;align-items:flex-start">
+        <h4 style="flex:1;min-width:0;margin:0;font-size:20px">Measuring how urban river microplastics shift invertebrate diversity</h4>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+          <div class="score score-mid">7.4</div>
+          <span class="score-label">Score</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:9px;margin-top:16px">
+        <span class="avatar" style="width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center">HS</span>
+        <a href="./Profile.dc.html" style="font-size:13.5px;font-weight:600;text-decoration:none;color:var(--color-neutral-700)">Hanne Sørvik</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px">
+        <span class="tag tag-neutral">Ecology</span><span class="tag tag-neutral">Environmental Science</span>
+      </div>
+      <div style="margin-top:16px;padding:16px 18px;border-radius:22px;background:var(--color-accent-100)">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--color-accent-700)">AI preview</span>
+        <p style="margin:7px 0 0;font-size:14px;line-height:1.55;color:var(--color-accent-900)">A field study with a clean sampling design and equipment that a well-supported school lab can reach. Strong as a two-semester project; the novelty is in the site selection.</p>
+      </div>
+      <div style="margin-top:auto;padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div style="display:flex;align-items:baseline;gap:9px">
+          <span style="font-family:var(--font-heading);font-weight:700;font-size:26px;letter-spacing:-0.035em;font-variant-numeric:tabular-nums">$120</span>
+          <span style="font-size:12.5px;font-weight:600;color:var(--color-neutral-600);font-variant-numeric:tabular-nums;white-space:nowrap">21 bought</span>
+        </div>
+        <a class="btn btn-primary btn-sm" href="./Idea.dc.html">Learn more</a>
+      </div>
+    </article>
+
+  </div>
+  <div style="display:flex;justify-content:center;margin-top:28px">
+    <a class="btn btn-secondary" href="./Market.dc.html">See all ideas on the Market
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
+    </a>
+  </div>
+</section>
+
+<section style="max-width:1200px;margin:0 auto;padding:72px 32px 24px">
+  <div class="panel-dark" style="position:relative;overflow:hidden;border-radius:38px;padding:60px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:44px;align-items:end">
+    <div style="position:absolute;right:-90px;top:-120px;width:420px;height:420px;border-radius:999px;background:radial-gradient(circle at 42% 42%, rgba(232,93,31,0.5), rgba(232,93,31,0.18) 46%, rgba(232,93,31,0) 100%);filter:blur(18px)"></div>
+    <div style="position:relative">
+      <span style="font-size:12px;font-weight:700;letter-spacing:0.055em;text-transform:uppercase;color:var(--color-accent-300)">Have an idea worth sharing?</span>
+      <h2 style="margin:18px 0 0;font-size:clamp(34px,4vw,56px);color:#fff8f2;max-width:19ch">Sell your idea at the Ideas Lab.</h2>
+      <p style="margin:22px 0 0;max-width:60ch;font-size:16.5px;line-height:1.65;color:rgba(255,248,242,0.7)">The Lab is your workspace for creating, evaluating, and publishing ideas. Document your concept, get an honest AI evaluation across six criteria, and decide when — and at what price — to put it on the Market.</p>
+    </div>
+    <a class="btn btn-primary btn-lg" href="./Lab.dc.html" style="position:relative">Open Ideas Lab
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
+    </a>
+  </div>
+</section>
+
+<section style="max-width:1200px;margin:0 auto;padding:56px 32px 104px">
+  <div class="section-head">
+    <div>
+      <span class="kicker">How it works</span>
+      <h2 style="margin:10px 0 0;font-size:clamp(30px,3.4vw,42px)">From idea to impact, in four steps</h2>
+    </div>
+    <p style="margin:0;max-width:32ch;font-size:14.5px;line-height:1.6;color:var(--color-neutral-600)">The same pipeline whether you're selling a startup concept or a research question.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:start">
+    <div style="padding:26px;border-radius:26px;background:#fff;box-shadow:var(--shadow-sm)">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;background:var(--color-accent-100);color:var(--color-accent-700);font-family:var(--font-heading);font-weight:700;font-size:15px;font-variant-numeric:tabular-nums">01</span>
+      <h4 style="margin:18px 0 10px;font-size:19px">Document your idea</h4>
+      <p style="margin:0;font-size:14px;line-height:1.6;color:var(--color-neutral-700)">Write the problem, the solution, and why it matters. Nothing is public yet.</p>
+    </div>
+    <div style="margin-top:22px;padding:26px;border-radius:26px;background:#fff;box-shadow:var(--shadow-sm)">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;background:var(--color-accent-100);color:var(--color-accent-700);font-family:var(--font-heading);font-weight:700;font-size:15px;font-variant-numeric:tabular-nums">02</span>
+      <h4 style="margin:18px 0 10px;font-size:19px">AI evaluates &amp; previews</h4>
+      <p style="margin:0;font-size:14px;line-height:1.6;color:var(--color-neutral-700)">Six criteria are scored and weighted, then a preview is written that describes the idea without giving it away.</p>
+    </div>
+    <div style="margin-top:44px;padding:26px;border-radius:26px;background:#fff;box-shadow:var(--shadow-sm)">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;background:var(--color-accent-100);color:var(--color-accent-700);font-family:var(--font-heading);font-weight:700;font-size:15px;font-variant-numeric:tabular-nums">03</span>
+      <h4 style="margin:18px 0 10px;font-size:19px">Set price &amp; publish</h4>
+      <p style="margin:0;font-size:14px;line-height:1.6;color:var(--color-neutral-700)">AI suggests a price; you choose it. Your idea goes live on the Market.</p>
+    </div>
+    <div style="margin-top:66px;padding:26px;border-radius:26px;background:var(--color-accent);box-shadow:0 18px 40px -22px rgba(200,70,20,0.75)">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;background:rgba(255,255,255,0.22);color:#fff;font-family:var(--font-heading);font-weight:700;font-size:15px;font-variant-numeric:tabular-nums">04</span>
+      <h4 style="margin:18px 0 10px;font-size:19px;color:#fff">Builders discover &amp; buy</h4>
+      <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.86)">Browse, filter, or describe what you need. Buy the full idea and start building.</p>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#1d1510;color:rgba(255,248,242,0.72);border-radius:38px 38px 0 0">
+  <div style="max-width:1200px;margin:0 auto;padding:64px 32px 28px;display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:40px">
+    <div>
+      <span style="font-family:var(--font-heading);font-weight:700;font-size:clamp(32px,4vw,48px);letter-spacing:-0.045em;color:#fff8f2">Markedia</span>
+      <p style="margin:14px 0 0;max-width:34ch;font-size:14px;line-height:1.65;color:rgba(255,248,242,0.55)">A market where ideas are documented, scored, priced, and handed to the people who will build them.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:11.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,248,242,0.4)">Market</span>
+      <a href="./Market.dc.html" style="color:rgba(255,248,242,0.78);text-decoration:none;font-size:14px">Browse ideas</a>
+      <a href="./Idea.dc.html" style="color:rgba(255,248,242,0.78);text-decoration:none;font-size:14px">An idea page</a>
+      <a href="./Market.dc.html" style="color:rgba(255,248,242,0.78);text-decoration:none;font-size:14px">AI search</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:11.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,248,242,0.4)">Visioners</span>
+      <a href="./Lab.dc.html" style="color:rgba(255,248,242,0.78);text-decoration:none;font-size:14px">Ideas Lab</a>
+      <a href="./Editor.dc.html" style="color:rgba(255,248,242,0.78);text-decoration:none;font-size:14px">Create an idea</a>
+      <a href="./Account.dc.html" style="color:rgba(255,248,242,0.78);text-decoration:none;font-size:14px">Your account</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:11.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,248,242,0.4)">Company</span>
+      <a href="./Markedia.dc.html" style="color:rgba(255,248,242,0.78);text-decoration:none;font-size:14px">About</a>
+      <a href="./Auth.dc.html" style="color:rgba(255,248,242,0.78);text-decoration:none;font-size:14px">Sign up</a>
+      <a href="./Markedia.dc.html" style="color:rgba(255,248,242,0.78);text-decoration:none;font-size:14px">Contact</a>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:20px 32px 40px;border-top:1px solid rgba(255,248,242,0.12);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px;font-weight:600;color:rgba(255,248,242,0.42)">
+    <span>markedia.me</span>
+    <span>Terms · Privacy</span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentTone&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:78,&quot;min&quot;:0,&quot;max&quot;:100,&quot;step&quot;:1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Accent palette&quot;},&quot;accentSaturation&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:100,&quot;min&quot;:50,&quot;max&quot;:115,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Accent palette&quot;}}">
+class Component extends DCLogic {
+  // Accent ramp is generated in oklch so one slider sweeps the whole palette
+  // from yellow through the house orange to red, keeping the lightness steps.
+  ramp() {
+    const t = Math.min(100, Math.max(0, this.props.accentTone ?? 78)) / 100;
+    const sat = Math.min(115, this.props.accentSaturation ?? 100) / 100;
+    const seg = t <= 0.8 ? 0 : 1;
+    const f = seg === 0 ? t / 0.8 : (t - 0.8) / 0.2;
+    const mix = (a, b) => a + (b - a) * f;
+    const hues = [98, 42, 28];
+    const hue = mix(hues[seg], hues[seg + 1]);
+    const steps = [
+      ['100', 0.975, 0.030, 0.965, 0.026, 0.960, 0.028],
+      ['200', 0.945, 0.075, 0.912, 0.060, 0.900, 0.066],
+      ['300', 0.905, 0.125, 0.838, 0.105, 0.822, 0.115],
+      ['400', 0.868, 0.160, 0.722, 0.158, 0.700, 0.170],
+      ['500', 0.832, 0.185, 0.618, 0.190, 0.585, 0.205],
+      ['600', 0.742, 0.168, 0.545, 0.180, 0.515, 0.195],
+      ['700', 0.632, 0.142, 0.462, 0.155, 0.438, 0.168],
+      ['800', 0.505, 0.112, 0.382, 0.130, 0.362, 0.140],
+      ['900', 0.372, 0.082, 0.295, 0.100, 0.278, 0.108]
+    ];
+    const out = {};
+    for (const row of steps) {
+      const k = row[0];
+      const l = mix(row[1 + seg * 2], row[3 + seg * 2]);
+      const c = mix(row[2 + seg * 2], row[4 + seg * 2]) * sat;
+      out['--color-accent-' + k] = `oklch(${l.toFixed(3)} ${c.toFixed(3)} ${hue.toFixed(1)})`;
+      if (k === '500' || k === '600' || k === '700') out['lch' + k] = [l, c, hue];
+    }
+    out['--color-accent'] = out['--color-accent-500'];
+    return out;
+  }
+  apply() {
+    const el = this.root;
+    if (!el) return;
+    const vars = this.ramp();
+    const lch = { 500: vars.lch500, 600: vars.lch600, 700: vars.lch700 };
+    delete vars.lch500; delete vars.lch600; delete vars.lch700;
+    for (const k in vars) el.style.setProperty(k, vars[k]);
+    // Solid-accent surfaces hardcode white labels. getComputedStyle hands oklch()
+    // back verbatim, so convert oklch -> linear sRGB here and pick whichever of
+    // white / ink actually measures the higher WCAG contrast ratio.
+    const lum = ([L, C, h]) => {
+      const a = C * Math.cos((h * Math.PI) / 180), b = C * Math.sin((h * Math.PI) / 180);
+      const l3 = Math.pow(L + 0.3963377774 * a + 0.2158037573 * b, 3);
+      const m3 = Math.pow(L - 0.1055613458 * a - 0.0638541728 * b, 3);
+      const s3 = Math.pow(L - 0.0894841775 * a - 1.2914855480 * b, 3);
+      const rgb = [
+        4.0767416621 * l3 - 3.3077115913 * m3 + 0.2309699292 * s3,
+        -1.2684380046 * l3 + 2.6097574011 * m3 - 0.3413193965 * s3,
+        -0.0041960863 * l3 - 0.7034186147 * m3 + 1.7076147010 * s3
+      ].map((v) => Math.min(1, Math.max(0, v)));
+      return 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
+    };
+    const ratio = (a, b) => (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+    const on = (step) => {
+      const bg = lum(lch[step]);
+      return ratio(bg, 1) >= ratio(bg, 0.00706) ? '#fff' : '#241a13';
+    };
+    let s = document.getElementById('markedia-on-accent');
+    if (!s) {
+      s = document.createElement('style');
+      s.id = 'markedia-on-accent';
+      document.head.appendChild(s);
+    }
+    // .nav a (0,1,1) outranks .btn-primary, so nav-scoped selectors are needed too.
+    s.textContent = [
+      `.btn-primary,.nav a.btn-primary,.chip-accent,.nav-mark{color:${on(500)}}`,
+      `.btn-primary:hover,.nav a.btn-primary:hover{color:${on(600)}}`,
+      `.btn-primary:active,.nav a.btn-primary:active{color:${on(700)}}`
+    ].join('');
+  }
+  componentDidMount() { this.apply(); }
+  componentDidUpdate() { this.apply(); }
+  renderVals() {
+    return { rootRef: (el) => { this.root = el; this.apply(); } };
+  }
+}
+</script>
+</body>
+</html>

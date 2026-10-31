@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="min-height:100vh;background:var(--color-bg)">
+
+<nav class="nav" style="position:sticky;top:0;z-index:40">
+  <div style="width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:36px">
+    <a class="nav-brand" href="./Markedia.dc.html"><span class="nav-mark">M</span>Markedia</a>
+    <div style="display:flex;gap:8px;align-items:center">
+      <a href="./Markedia.dc.html">About</a>
+      <a href="./Market.dc.html">Market</a>
+      <a href="./Lab.dc.html" aria-current="page">Ideas Lab</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;margin-left:auto">
+      <a href="./Account.dc.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:600"><span class="avatar" style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center">ND</span>Nadia</a>
+      <a class="btn btn-ghost btn-sm" href="./Auth.dc.html">Log out</a>
+    </div>
+  </div>
+</nav>
+
+<main style="max-width:1160px;margin:0 auto;padding:40px 32px 0">
+
+  <div class="panel-dark" style="border-radius:var(--radius-lg);padding:44px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap">
+    <div>
+      <span class="kicker" style="color:var(--color-accent-300)">Your workspace</span>
+      <h1 style="margin:16px 0 0;font-size:clamp(38px,4.4vw,58px);color:#fff">Ideas Lab</h1>
+      <p style="margin:14px 0 0;max-width:52ch;font-size:16px;line-height:1.6;color:var(--color-neutral-300)">Document, evaluate, and publish your ideas — all in one place.</p>
+    </div>
+    <a class="btn btn-primary btn-lg" href="./Editor.dc.html">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
+      Create new idea
+    </a>
+  </div>
+
+  <section style="margin-top:52px">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Drafts</span>
+        <h3 style="margin:8px 0 0">Pick up where you left off</h3>
+      </div>
+      <span class="kicker kicker-muted num">2 drafts — finish them or convert to a full idea</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+      <a class="card" href="./Editor.dc.html" style="text-decoration:none;color:inherit;border-style:dashed">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+          <div style="flex:1;min-width:0">
+            <span class="badge badge-draft">Draft</span>
+            <h5 style="margin:10px 0 0">A ledger that lets tool libraries lend across neighbourhoods</h5>
+          </div>
+          <div class="score score-sm score-none">N/A</div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-neutral">Social</span><span class="tag tag-neutral">Logistics</span></div>
+        <p class="card-body" style="font-size:13px">Not yet evaluated — the problem statement still needs the mechanism.</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--color-divider)">
+          <span class="kicker kicker-muted num" style="font-size:10px">18 Jul 2026</span>
+          <span class="kicker kicker-muted" style="font-size:10px">—</span>
+        </div>
+      </a>
+      <a class="card" href="./Editor.dc.html" style="text-decoration:none;color:inherit;border-style:dashed">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+          <div style="flex:1;min-width:0">
+            <span class="badge badge-draft">Draft</span>
+            <h5 style="margin:10px 0 0"><span style="color:var(--color-neutral-500);font-style:italic">Untitled</span></h5>
+          </div>
+          <div class="score score-sm score-none">N/A</div>
+        </div>
+        <p class="card-body" style="font-size:13px">Started 3 days ago. Research question written, methodology empty.</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--color-divider)">
+          <span class="kicker kicker-muted num" style="font-size:10px">15 Jul 2026</span>
+          <span class="kicker kicker-muted" style="font-size:10px">—</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section style="margin-top:52px">
+    <div class="section-head">
+      <div style="display:flex;align-items:baseline;gap:12px">
+        <h3 style="margin:0">Your ideas</h3>
+        <span class="kicker kicker-muted num">5</span>
+      </div>
+      <select class="input" style="width:auto;min-height:36px;font-size:13px">
+        <option>Newest first</option>
+        <option>Highest score</option>
+        <option>Most bought</option>
+        <option>Price: high to low</option>
+      </select>
+    </div>
+
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin:-8px 0 20px">
+      <button class="chip chip-active" type="button">All (5)</button>
+      <button class="chip" type="button">Published (3)</button>
+      <button class="chip" type="button">Unpublished (2)</button>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+
+      <a class="card" href="./Editor.dc.html" style="text-decoration:none;color:inherit">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+          <div style="flex:1;min-width:0">
+            <span class="badge badge-published">Published</span>
+            <h5 style="margin:10px 0 0">A shared credit ledger for informal savings circles</h5>
+          </div>
+          <div class="score score-sm score-high">8.9</div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-neutral">FinTech</span><span class="tag tag-neutral">Social</span></div>
+        <p class="card-body" style="font-size:13px">Formalising a practice that already works informally, so the innovation is in the record-keeping and the trust model.</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--color-divider)">
+          <span class="kicker kicker-muted num" style="font-size:10px">02 Jul 2026 · 4 bought</span>
+          <span class="num" style="font-family:var(--font-heading);font-weight:600;font-size:16px">$420</span>
+        </div>
+      </a>
+
+      <a class="card" href="./Editor.dc.html" style="text-decoration:none;color:inherit">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+          <div style="flex:1;min-width:0">
+            <span class="badge badge-published">Published</span>
+            <h5 style="margin:10px 0 0">A compliance layer that lets small clinics run remote trials</h5>
+          </div>
+          <div class="score score-sm score-high">8.6</div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-neutral">HealthTech</span><span class="tag tag-neutral">AI / ML</span></div>
+        <p class="card-body" style="font-size:13px">A regulatory-workflow product for under-resourced clinical sites — the submission burden reframed as a template problem.</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--color-divider)">
+          <span class="kicker kicker-muted num" style="font-size:10px">14 Jun 2026 · 12 bought</span>
+          <span class="num" style="font-family:var(--font-heading);font-weight:600;font-size:16px">$340</span>
+        </div>
+      </a>
+
+      <a class="card" href="./Editor.dc.html" style="text-decoration:none;color:inherit">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+          <div style="flex:1;min-width:0">
+            <span class="badge badge-secured">Secured</span>
+            <h5 style="margin:10px 0 0">A routing model that prices last-mile returns by street</h5>
+          </div>
+          <div class="score score-sm score-high">8.2</div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-neutral">Logistics</span></div>
+        <p class="card-body" style="font-size:13px">Off the market — a buyer secured exclusivity. Everyone who already bought it keeps access.</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--color-divider)">
+          <span class="kicker kicker-muted num" style="font-size:10px">21 May 2026 · 9 bought</span>
+          <span class="num" style="font-family:var(--font-heading);font-weight:600;font-size:16px">$260</span>
+        </div>
+      </a>
+
+      <a class="card" href="./Editor.dc.html" style="text-decoration:none;color:inherit">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+          <div style="flex:1;min-width:0">
+            <span class="badge badge-unpublished">Unpublished</span>
+            <h5 style="margin:10px 0 0">Turning empty freight backhauls into scheduled rural deliveries</h5>
+          </div>
+          <div class="score score-sm score-mid">7.1</div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-neutral">Logistics</span><span class="tag tag-neutral">Marketplace</span></div>
+        <p class="card-body" style="font-size:13px">Evaluated and priced, not yet live. Re-read the defensibility note before publishing.</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--color-divider)">
+          <span class="kicker kicker-muted num" style="font-size:10px">09 Jul 2026</span>
+          <span class="num" style="font-family:var(--font-heading);font-weight:600;font-size:16px">$180</span>
+        </div>
+      </a>
+
+      <a class="card" href="./Editor.dc.html" style="text-decoration:none;color:inherit">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+          <div style="flex:1;min-width:0">
+            <span class="badge badge-unpublished">Unpublished</span>
+            <h5 style="margin:10px 0 0">Whether tidal microhabitats buffer heatwave mortality in mussels</h5>
+          </div>
+          <div class="score score-sm score-mid">6.8</div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag tag-neutral">Ecology</span><span class="tag tag-neutral">Biology</span></div>
+        <p class="card-body" style="font-size:13px">The evaluation is out of date — the idea has been edited since. Re-evaluate before publishing.</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--color-divider)">
+          <span class="kicker" style="font-size:10px;color:var(--color-accent-2-700)">Stale evaluation</span>
+          <span class="num" style="font-family:var(--font-heading);font-weight:600;font-size:16px">$95</span>
+        </div>
+      </a>
+
+      <a class="card" href="./Editor.dc.html" style="text-decoration:none;color:inherit;border-style:dashed;align-items:center;justify-content:center;text-align:center;min-height:210px">
+        <span style="display:grid;place-items:center;width:40px;height:40px;border-radius:var(--radius-md);background:var(--color-accent-100);color:var(--color-accent)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
+        </span>
+        <h5 style="margin:12px 0 0">Create a new idea</h5>
+        <p class="card-body" style="font-size:13px;flex:none;max-width:26ch">Document it, evaluate it, price it, publish it.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <section style="margin-top:52px;padding-top:28px;border-top:1px solid var(--color-divider)">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:20px">
+      <div>
+        <div style="display:flex;align-items:baseline;gap:12px">
+          <h3 style="margin:0">Archive</h3>
+          <span class="kicker kicker-muted num">3</span>
+        </div>
+        <p style="margin:6px 0 0;font-size:14px;color:var(--color-neutral-700)">Ideas you've set aside. Restore any time.</p>
+      </div>
+      <button class="btn btn-secondary btn-sm" type="button">
+        Show archive
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<footer style="border-top:1px solid var(--color-divider);margin-top:72px">
+  <div style="max-width:1160px;margin:0 auto;padding:22px 32px;display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <span class="kicker kicker-muted">Markedia — the market of ideas</span>
+    <div style="display:flex;gap:22px">
+      <a class="kicker kicker-muted" href="./Market.dc.html" style="text-decoration:none">Market</a>
+      <a class="kicker kicker-muted" href="./Account.dc.html" style="text-decoration:none">Account</a>
+      <a class="kicker kicker-muted" href="./Markedia.dc.html" style="text-decoration:none">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>
