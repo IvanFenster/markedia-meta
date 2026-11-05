@@ -114,6 +114,29 @@ const META_MODEL = process.env.META_MODEL || "muse-spark-1.3";
 type MuseParams = Omit<OpenAI.Chat.ChatCompletionCreateParamsNonStreaming, "tools"> &
   Record<string, unknown>;
 
+/**
+ * Turn a provider error into something a developer can act on.
+ *
+ * A misconfigured model id returns a bare "404 The requested model was not
+ * found." — which, on a deployment whose key is valid, reads like the model is
+ * broken rather than like the environment is wrong. The two causes look
+ * identical from the outside and are told apart only by the status code: a bad
+ * key is a 401, a model the key cannot reach is a 404. Say which, and name the
+ * model actually sent, because the configured value is the thing to go and look
+ * at.
+ */
+function describeModelError(err: unknown): string {
+  const status = (err as { status?: number })?.status;
+  const message = err instanceof Error ? err.message : String(err);
+  if (status === 404) {
+    return `Model "${META_MODEL}" was not found by the Meta Model API. The key authenticated, so the model is the problem: either META_MODEL names something that does not exist, or this key's account cannot reach it (contributor-tier keys see the "-contributor" variants instead). Check GET /v1/models with this key. Original error: ${message}`;
+  }
+  if (status === 401 || status === 403) {
+    return `The Meta Model API rejected the credentials (${status}). Check META_API_KEY. Original error: ${message}`;
+  }
+  return message;
+}
+
 function museComplete(
   params: MuseParams,
   options?: { signal?: AbortSignal }
@@ -652,7 +675,9 @@ async function researchCompetitors(
     } catch (err) {
       clearTimeout(timer);
       const aborted = err instanceof Error && err.name === "AbortError";
-      lastError = aborted ? `attempt timed out after ${PER_ATTEMPT_MS / 1000}s` : String(err);
+      lastError = aborted
+        ? `attempt timed out after ${PER_ATTEMPT_MS / 1000}s`
+        : describeModelError(err);
       console.warn(`[evaluate] research attempt ${attempt + 1} failed: ${lastError}`);
       if (attempt < MAX_ATTEMPTS - 1) {
         await new Promise((r) => setTimeout(r, 2000 * (attempt + 1)));
@@ -708,23 +733,32 @@ async function scoreAndPreview(
     input: userMessage,
   };
 
-  const completion = await museComplete({
-    model: META_MODEL,
-    messages: [
-      { role: "system", content: SCORING_SYSTEM },
-      { role: "user", content: userMessage },
-    ],
-    // The schema is enforced by the API, so the answer is parseable by
-    // construction. Judging an idea is the whole job, so think hard.
-    response_format: {
-      type: "json_schema",
-      json_schema: { name: "idea_evaluation", strict: true, schema: SCORING_SCHEMA },
-    },
-    reasoning_effort: EFFORT.scoring,
-    // Reasoning tokens count against max_tokens, so this covers the thinking
-    // AND the JSON answer. Seven criteria with reasoning is a long answer.
-    max_tokens: 16384,
-  });
+  let completion: OpenAI.Chat.ChatCompletion;
+  try {
+    completion = await museComplete({
+      model: META_MODEL,
+      messages: [
+        { role: "system", content: SCORING_SYSTEM },
+        { role: "user", content: userMessage },
+      ],
+      // The schema is enforced by the API, so the answer is parseable by
+      // construction. Judging an idea is the whole job, so think hard.
+      response_format: {
+        type: "json_schema",
+        json_schema: { name: "idea_evaluation", strict: true, schema: SCORING_SCHEMA },
+      },
+      reasoning_effort: EFFORT.scoring,
+      // Reasoning tokens count against max_tokens, so this covers the thinking
+      // AND the JSON answer. Seven criteria with reasoning is a long answer.
+      max_tokens: 16384,
+    });
+  } catch (err) {
+    // Scoring is the step that fails the whole run, so this is the message a
+    // developer will actually see.
+    meta.durationMs = Date.now() - t0;
+    meta.error = describeModelError(err);
+    return { ok: false, meta };
+  }
 
   meta.durationMs = Date.now() - t0;
   const choice = completion.choices[0];
