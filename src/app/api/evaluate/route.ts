@@ -327,7 +327,10 @@ WITHHOLD — a reader must not be able to reconstruct the idea:
 
 VOCABULARY RULE: never reuse a distinctive noun or phrase from the Solution or Differentiator fields, or a close synonym of one. If the idea's own words are "sensory map", "taste profile", or "soil carbon verification", those terms are unavailable to you — use the ordinary category above them. This applies hardest to summary, but holds in every field.
 
-ACCEPTANCE BAR: at least five genuinely different products must be able to fit your finished summary. If only one product could match it, the summary names too much; abstract it further before you answer. When you are unsure whether a detail leaks, leave it out.
+ACCEPTANCE BAR — the summary is bounded at BOTH ends, and failing either end is a failure:
+- CEILING: at least five genuinely different products must be able to fit it. If only one product could match, it names too much; abstract further.
+- FLOOR: a reader must still be able to say what field it belongs to and who it is for, in ordinary words — "home energy costs", "hospital staff scheduling", "care for ageing parents". If they cannot tell whether it is a dating app or a logistics tool, it is useless, and a useless preview sells nothing. Name the domain plainly; withhold the mechanism inside it.
+Abstracting past the floor is the more common mistake. Generic words for the situation ("disruptive conditions", "modern challenges", "everyday friction") are a sign you have gone too far — they describe nothing and no one browses for them. When you are unsure whether a specific detail leaks, leave that detail out, but never retreat into vagueness about the field itself.
 
 DRAWBACKS:
 Buyers see your 1-20 scores halved onto a 1-10 scale, and the drawback rule is written in terms of what they see. A criterion counts as WEAK when you scored it 11 or lower out of 20 — that is, below 6 out of 10.
